@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return str[gh["sensors"]["light_lux"]]
+    return rednder_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
