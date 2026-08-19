@@ -7,7 +7,12 @@
 </head>
 <body>
     <h1>Greenhouse App</h1>
-{{ gh }}
+{{ gh.sensors.humidity }}
+{{ gh.sensors.light_lux }}
+
+{{ gh.sensors.history_logs[0] }}
+
+{{ gh.crops[1].crop }}
 
 </body>
 </html>
