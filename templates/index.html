@@ -11,7 +11,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +27,12 @@
   </div>
 </nav>
 
-    <h1>Greenhouse App</h1>
-{{ gh.sensors.humidity }}
-{{ gh.sensors.light_lux }}
+<div class="container">
 
-{{ gh.sensors.history_logs[0] }}
+  <div class="row">
 
-{{ gh.crops[1].crop }}
+<div class="col">
+
 
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
@@ -45,6 +44,9 @@
   </div>
 </div>
 
+</div>
+
+<div class="col">
 
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
@@ -55,6 +57,42 @@
     <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
+</div>
+
+</div>
+
+<div class="col">
+
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Humidity</h5>
+    <h2>{{ gh.sensors.humidity }}</h2>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+
+<div class="col">
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
+    <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
+    <p class="card-text">Days to maturity: {{ gh.crops[1].days_to_maturity }}</p>
+    <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
 </div>
 
 
