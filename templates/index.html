@@ -31,67 +31,92 @@
 
   <div class="row">
 
-<div class="col">
+    <div class="col">
 
+      <div class="card" style="width: 100%;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Humidity</h5>
+          <h2>{{ gh.sensors.humidity }}</h2>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Humidity</h5>
-    <h2>{{ gh.sensors.humidity }}</h2>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    </div>
 
-</div>
+    <div class="col">
 
-<div class="col">
+      <div class="card" style="width: 100%;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
+          <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
+          <p class="card-text">Days to maturity: {{ gh.crops[1].days_to_maturity }}</p>
+          <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
-    <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
-    <p class="card-text">Days to maturity: {{ gh.crops[1].days_to_maturity }}</p>
-    <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    </div>
 
-</div>
+    <div class="col">
 
-<div class="col">
+      <div class="card" style="width: 100%;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Humidity</h5>
+          <h2>{{ gh.sensors.humidity }}</h2>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
+    </div>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Humidity</h5>
-    <h2>{{ gh.sensors.humidity }}</h2>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    <div class="col">
 
-</div>
+      <div class="card" style="width: 100%;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{ gh.crops[0].crop }}</h2>
+          <h5>Planted on: {{ gh.crops[0].planted_on }}</h5>
+          <p class="card-text">Days to maturity: {{ gh.crops[0].days_to_maturity }}</p>
+          <p class="card-text">Health status: {{ gh.crops[0].health_status }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
-<div class="col">
-
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
-    <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
-    <p class="card-text">Days to maturity: {{ gh.crops[1].days_to_maturity }}</p>
-    <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-</div>
+    </div>
 
   </div>
+
+  {{ gh.crops[0] }}
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date Planted</th>
+        <th scope="col">Days to Maturity</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date of Harvest</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for crop in gh.crops %}
+      <tr>
+        <td>{{ crop.id }}</td>
+        <td>{{ crop.crop }}</td>
+        <td>{{ crop.planted_on }}</td>
+        <td>{{ crop.days_to_maturity }}</td>
+        <td>{{ crop.health_status }}</td>
+        <td>{{ crop.harvest_forecast }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
 </div>
 

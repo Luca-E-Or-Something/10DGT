@@ -34,6 +34,14 @@ gh = {
       "days_to_maturity": 80,
       "harvest_forecast": "2026-04-05",
       "health_status": "Requires Water"
+    },
+    {
+      "id": "2",
+            "crop": "Potato",
+            "planted_on": "2026-08-27",
+            "days_to_maturity": 120,
+            "harvest_forecast": "2026-12-25",
+            "health_status": "Sprouting"
     }
   ]
 }
