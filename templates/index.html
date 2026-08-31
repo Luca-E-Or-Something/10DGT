@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greenhouse App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </head>
+{% extends "layout.html" %}
 
-
-<body>
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-
+{% block content %}
   <div class="row">
 
     <div class="col">
@@ -48,7 +20,7 @@
     <div class="col">
 
       <div class="card" style="width: 100%;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ url_for('static', filename= 'tomato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
           <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
@@ -63,11 +35,12 @@
     <div class="col">
 
       <div class="card" style="width: 100%;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ url_for('static', filename= 'potato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Humidity</h5>
-          <h2>{{ gh.sensors.humidity }}</h2>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <h2 class="card-title">{{ gh.crops[2].crop }}</h2>
+          <h5>Planted on: {{ gh.crops[2].planted_on }}</h5>
+          <p class="card-text">Days to maturity: {{ gh.crops[2].days_to_maturity }}</p>
+          <p class="card-text">Health status: {{ gh.crops[2].health_status }}</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
@@ -77,7 +50,7 @@
     <div class="col">
 
       <div class="card" style="width: 100%;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ url_for('static', filename= 'lettuce.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[0].crop }}</h2>
           <h5>Planted on: {{ gh.crops[0].planted_on }}</h5>
@@ -91,35 +64,11 @@
 
   </div>
 
-  {{ gh.crops[0] }}
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Date Planted</th>
-        <th scope="col">Days to Maturity</th>
-        <th scope="col">Status</th>
-        <th scope="col">Date of Harvest</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for crop in gh.crops %}
-      <tr>
-        <td>{{ crop.id }}</td>
-        <td>{{ crop.crop }}</td>
-        <td>{{ crop.planted_on }}</td>
-        <td>{{ crop.days_to_maturity }}</td>
-        <td>{{ crop.health_status }}</td>
-        <td>{{ crop.harvest_forecast }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
 
 </div>
 
 
 </body>
 </html>
+
+{% endblock %}
