@@ -42,6 +42,14 @@ gh = {
             "days_to_maturity": 120,
             "harvest_forecast": "2026-12-25",
             "health_status": "Sprouting"
+    },
+        {
+      "id": "3",
+            "crop": "Onion",
+            "planted_on": "2026-03-11",
+            "days_to_maturity": 67,
+            "harvest_forecast": "2026-05-17",
+            "health_status": "Optimal"
     }
   ]
 }

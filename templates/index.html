@@ -6,11 +6,12 @@
     <div class="col">
 
       <div class="card" style="width: 100%;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ url_for('static', filename= 'onion.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Humidity</h5>
-          <h2>{{ gh.sensors.humidity }}</h2>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <h2 class="card-title">{{ gh.crops[3].crop }}</h2>
+          <h5>Planted on: {{ gh.crops[3].planted_on }}</h5>
+          <p class="card-text">Days to maturity: {{ gh.crops[3].days_to_maturity }}</p>
+          <p class="card-text">Health status: {{ gh.crops[3].health_status }}</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
