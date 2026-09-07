@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date Planted</th>
+        <th scope="col">Days to Maturity</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date of Harvest</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ gh.sensors.current_temp }}</td>
+            <td>{{ gh.sensors.target_temp }}</td>
+            <td>{{ gh.sensors.humidity }}</td>
+            <td>{{ gh.sensors.soil_moisture }}</td>
+            <td>{{ gh.sensors.light_lux }}</td>
+            <td>{{ gh.sensors.light_status }}</td>
+            <td>{{ gh.sensors.target_lux }}</td>
+        </tr>
+    </tbody>
+</table>
+
+  {% endblock %}

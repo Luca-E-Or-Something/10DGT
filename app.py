@@ -11,5 +11,9 @@ def index():
 def Crops():
     return render_template("Crops.html", gh=gh)
 
+@app.route("/Sensors")
+def Sensors():
+    return render_template("Sensors.html", gh=gh)
+
 if __name__ == '__main__':
     app.run(debug=True)
