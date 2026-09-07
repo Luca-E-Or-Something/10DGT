@@ -9,10 +9,7 @@
         <img src="{{ url_for('static', filename= 'onion.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[3].crop }}</h2>
-          <h5>Planted on: {{ gh.crops[3].planted_on }}</h5>
-          <p class="card-text">Days to maturity: {{ gh.crops[3].days_to_maturity }}</p>
-          <p class="card-text">Health status: {{ gh.crops[3].health_status }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="/Onion" class="btn btn-primary">More info</a>
         </div>
       </div>
 
@@ -24,10 +21,7 @@
         <img src="{{ url_for('static', filename= 'tomato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
-          <h5>Planted on: {{ gh.crops[1].planted_on }}</h5>
-          <p class="card-text">Days to maturity: {{ gh.crops[1].days_to_maturity }}</p>
-          <p class="card-text">Health status: {{ gh.crops[1].health_status }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="/Tomato" class="btn btn-primary">More info</a>
         </div>
       </div>
 
@@ -39,10 +33,7 @@
         <img src="{{ url_for('static', filename= 'potato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[2].crop }}</h2>
-          <h5>Planted on: {{ gh.crops[2].planted_on }}</h5>
-          <p class="card-text">Days to maturity: {{ gh.crops[2].days_to_maturity }}</p>
-          <p class="card-text">Health status: {{ gh.crops[2].health_status }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="/Potato" class="btn btn-primary">More info</a>
         </div>
       </div>
 
@@ -54,10 +45,7 @@
         <img src="{{ url_for('static', filename= 'lettuce.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="card-title">{{ gh.crops[0].crop }}</h2>
-          <h5>Planted on: {{ gh.crops[0].planted_on }}</h5>
-          <p class="card-text">Days to maturity: {{ gh.crops[0].days_to_maturity }}</p>
-          <p class="card-text">Health status: {{ gh.crops[0].health_status }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="/Lettuce" class="btn btn-primary">More info</a>
         </div>
       </div>
 

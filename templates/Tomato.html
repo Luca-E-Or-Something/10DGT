@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+      <div class="card" style="width: 25%;">
+        <img src="{{ url_for('static', filename= 'tomato.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
+        </div>
+      </div>
+      
+{% endblock %}
