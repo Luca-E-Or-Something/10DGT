@@ -2,11 +2,11 @@
 
 {% block content %}
 
-      <div class="card text-bg-light mb-3" style="width: 25%;">
+      <div class="card text-bg-light border border-success-subtle mb-3" style="width: 25%;">
         <img src="{{ url_for('static', filename= 'potato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h2 class="text-success-emphasis card-title">{{ gh.crops[2].crop }}</h2>
-          <a href="https://en.wikipedia.org/wiki/Potato" class="btn btn-success">Wikipedia page</a>
+          <a href="https://en.wikipedia.org/wiki/Potato" class="btn text-success-emphasis border border-success-subtle">Wikipedia page</a>
         </div>
       </div>
       
