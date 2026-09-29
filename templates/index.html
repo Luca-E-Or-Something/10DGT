@@ -2,18 +2,18 @@
 
 {% block content %}
 
-<h1 class="text-center">Welcome to the Greenhouse App!</h1>
-<h2 class="text-left">About our Crops:</h2>
+<h1 class="text-success-emphasis  text-center">Welcome to the Greenhouse App!</h1>
+<h2 class="text-success-emphasis text-left">About our Crops:</h2>
 
   <div class="row">
 
     <div class="col">
 
-      <div class="card" style="width: 100%;">
+      <div class="card text-bg-light mb-3" style="width: 100%;">
         <img src="{{ url_for('static', filename= 'onion.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">{{ gh.crops[3].crop }}</h2>
-          <a href="/Onion" class="btn btn-primary">More info</a>
+          <h2 class="text-success-emphasis card-title">{{ gh.crops[3].crop }}</h2>
+          <a href="/Onion" class="btn btn-success">More info</a>
         </div>
       </div>
 
@@ -21,11 +21,11 @@
 
     <div class="col">
 
-      <div class="card" style="width: 100%;">
+      <div class="card text-bg-light mb-3" style="width: 100%;">
         <img src="{{ url_for('static', filename= 'tomato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">{{ gh.crops[1].crop }}</h2>
-          <a href="/Tomato" class="btn btn-primary">More info</a>
+          <h2 class="text-success-emphasis card-title">{{ gh.crops[1].crop }}</h2>
+          <a href="/Tomato" class="btn btn-success">More info</a>
         </div>
       </div>
 
@@ -33,11 +33,11 @@
 
     <div class="col">
 
-      <div class="card" style="width: 100%;">
+      <div class="card text-bg-light mb-3" style="width: 100%;">
         <img src="{{ url_for('static', filename= 'potato.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">{{ gh.crops[2].crop }}</h2>
-          <a href="/Potato" class="btn btn-primary">More info</a>
+          <h2 class="text-success-emphasis card-title">{{ gh.crops[2].crop }}</h2>
+          <a href="/Potato" class="btn btn-success">More info</a>
         </div>
       </div>
 
@@ -45,11 +45,11 @@
 
     <div class="col">
 
-      <div class="card" style="width: 100%;">
+      <div class="card text-bg-light mb-3" style="width: 100%;">
         <img src="{{ url_for('static', filename= 'lettuce.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">{{ gh.crops[0].crop }}</h2>
-          <a href="/Lettuce" class="btn btn-primary">More info</a>
+          <h2 class="text-success-emphasis card-title">{{ gh.crops[0].crop }}</h2>
+          <a href="/Lettuce" class="btn btn-success">More info</a>
         </div>
       </div>
 

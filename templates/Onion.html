@@ -2,11 +2,11 @@
 
 {% block content %}
 
-      <div class="card" style="width: 25%;">
+      <div class="card text-bg-light mb-3" style="width: 25%;">
         <img src="{{ url_for('static', filename= 'onion.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">{{ gh.crops[3].crop }}</h2>
-          <a href="https://en.wikipedia.org/wiki/Onion" class="btn btn-primary">Wikipedia page</a>
+          <h2 class="text-success-emphasis card-title">{{ gh.crops[3].crop }}</h2>
+          <a href="https://en.wikipedia.org/wiki/Onion" class="btn btn-success">Wikipedia page</a>
         </div>
       </div>
 
